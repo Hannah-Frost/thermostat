@@ -54,4 +54,18 @@ describe('Thermostat', function() {
     thermostat.powerSavingOn();
     expect(thermostat.powerSavingStatus()).toEqual(true);
   });
+
+  it("shows its energy usage as high", function() {
+    thermostat.up(5);
+    expect(thermostat.energyUsage()).toEqual('HIGH-USAGE')
+  });
+
+  it("shows its energy usage as medium", function() {
+    expect(thermostat.energyUsage()).toEqual('MEDIUM-USAGE')
+  });
+
+  it("shows its energy usage as low", function() {
+    thermostat.down(5);
+    expect(thermostat.energyUsage()).toEqual('LOW-USAGE')
+  });
 });
