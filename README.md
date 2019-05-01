@@ -5,7 +5,9 @@
 ## What criteria does this program satisfy?
 - Thermostat temperature starts at 20 degrees.
 - Temperature can be increased and decreased with an up / down function.
-- Power saving mode is on by default, where the maximum temperature is 25 degrees and the minimum temperature is 32 degrees.
+- Power saving mode is on by default.
+- With power saving mode, the maximum temperature is 25 degrees.
+- Without power saving mode, the maximum temperature is 32 degrees.
 - Without power saving mode, the minimum temperature is 10 degrees.
 - Temperature can be reset to 20 degrees using a reset function.
 - Thermostats current energy usage can be shown (<18 : low-usage, <25 : medium-usage, higher : high-usage).
