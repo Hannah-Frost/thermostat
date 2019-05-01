@@ -1,5 +1,6 @@
 function Thermostat() {
-  this.currentTemp = 20;
+  this.defaultTemp = 20;
+  this.currentTemp = this.defaultTemp;
   this.powerSaving = true;
 };
 
@@ -32,7 +33,7 @@ Thermostat.prototype.down = function(num) {
 };
 
 Thermostat.prototype.reset = function() {
-  this.currentTemp = 20
+  this.currentTemp = this.defaultTemp
 };
 
 Thermostat.prototype.powerSavingOn = function() {
