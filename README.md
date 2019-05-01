@@ -13,3 +13,5 @@
 - Thermostats current energy usage can be shown (<18 : low-usage, <25 : medium-usage, higher : high-usage).
 
 ## Domain Model
+
+  ![Domain Model](https://github.com/Hannah-Frost/thermostat/blob/master/images/domain_model.png)
