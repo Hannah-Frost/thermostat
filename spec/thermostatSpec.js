@@ -19,6 +19,11 @@ describe('Thermostat', function() {
     expect(thermostat.temp()).toEqual(17)
   });
 
+  it("can not go below the 10 degrees minimum", function () {
+    thermostat.down(11);
+    expect(thermostat.temp()).toEqual(20)
+  });
+
   it("can be reset to its default temperature", function() {
     thermostat.up(3);
     thermostat.reset();
