@@ -11,3 +11,5 @@
 - The minimum temperature is 10 degrees.
 - Temperature can be reset to 20 degrees using a reset function.
 - Thermostats current energy usage can be shown (<18 : low-usage, <25 : medium-usage, higher : high-usage).
+
+## Domain Model

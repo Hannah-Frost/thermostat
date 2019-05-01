@@ -4,7 +4,7 @@ function Thermostat() {
   this.powerSaving = true;
 };
 
-Thermostat.prototype.temp = function() {
+Thermostat.prototype.showTemp = function() {
   return this.currentTemp;
 };
 
