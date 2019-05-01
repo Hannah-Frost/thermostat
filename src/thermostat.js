@@ -13,3 +13,7 @@ Thermostat.prototype.up = function() {
 Thermostat.prototype.down = function() {
   this.currentTemp = this.currentTemp - 3
 };
+
+Thermostat.prototype.reset = function() {
+  this.currentTemp = 20
+};

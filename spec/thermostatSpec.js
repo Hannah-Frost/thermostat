@@ -18,4 +18,10 @@ describe('Thermostat', function() {
     thermostat.down();
     expect(thermostat.temp()).toEqual(17)
   });
+
+  it("can be reset to its default temperature", function() {
+    thermostat.up();
+    thermostat.reset();
+    expect(thermostat.temp()).toEqual(20)
+  });
 });
