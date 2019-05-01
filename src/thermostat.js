@@ -3,17 +3,17 @@ function Thermostat() {
 };
 
 Thermostat.prototype.temp = function() {
-  return this.currentTemp
+  return this.currentTemp;
 };
 
-Thermostat.prototype.up = function() {
-  this.currentTemp = this.currentTemp + 3;
+Thermostat.prototype.up = function(num) {
+  this.currentTemp = this.currentTemp + num;
 };
 
-Thermostat.prototype.down = function() {
-  this.currentTemp = this.currentTemp - 3
+Thermostat.prototype.down = function(num) {
+  this.currentTemp = this.currentTemp - num;
 };
 
 Thermostat.prototype.reset = function() {
-  this.currentTemp = 20
+  this.currentTemp = 20;
 };

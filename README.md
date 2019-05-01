@@ -8,4 +8,4 @@
 - Power saving mode is on by default, where the maximum temperature is 25 degrees and the minimum temperature is 32 degrees.
 - Without power saving mode, the minimum temperature is 10 degrees.
 - Temperature can be reset to 20 degrees using a reset function.
-- Thermostats currently energy usage can be shown (<18 : low-usage, <25 : medium-usage, higher : high-usage).
+- Thermostats current energy usage can be shown (<18 : low-usage, <25 : medium-usage, higher : high-usage).
