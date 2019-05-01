@@ -9,8 +9,13 @@ describe('Thermostat', function() {
     expect(thermostat.temp()).toEqual(20)
   });
 
-  it("can increase the temperature by 10", function() {
+  it("can increase the temperature by 3", function() {
     thermostat.up();
-    expect(thermostat.temp()).toEqual(30)
+    expect(thermostat.temp()).toEqual(23)
+  });
+
+  it("can decrease the temperature by 3", function() {
+    thermostat.down();
+    expect(thermostat.temp()).toEqual(17)
   });
 });

@@ -7,5 +7,9 @@ Thermostat.prototype.temp = function() {
 };
 
 Thermostat.prototype.up = function() {
-  this.currentTemp = this.currentTemp + 10;
+  this.currentTemp = this.currentTemp + 3;
+};
+
+Thermostat.prototype.down = function() {
+  this.currentTemp = this.currentTemp - 3
 };
