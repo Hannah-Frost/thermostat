@@ -14,37 +14,13 @@ describe('Thermostat', function() {
     expect(thermostat.showTemp()).toEqual(21)
   });
 
-  it("can decrease the temperature by 3", function() {
+  it("can decrease the temperature", function() {
     thermostat.down();
     expect(thermostat.showTemp()).toEqual(19)
   });
 
-  it("can not go above the 25 degrees maximum when power saving is on", function() {
-    for (var i = 0; i < 20; i++) {
-      thermostat.up();
-    }
-    expect(thermostat.showTemp()).toEqual(25)
-  });
-
-  it("can not go above the 32 degrees maximum when power saving is off", function() {
-    thermostat.powerSavingOff();
-    for (var i = 0; i < 20; i++) {
-      thermostat.up();
-    }
-    expect(thermostat.showTemp()).toEqual(32)
-  });
-
-  it("can not go below the 10 degrees minimum", function() {
-    for (var i = 0; i < 20; i++) {
-      thermostat.down();
-    }
-    expect(thermostat.showTemp()).toEqual(10)
-  });
-
   it("can be reset to its default temperature", function() {
-    for (var i = 0; i < 4; i++) {
-      thermostat.up();
-    }
+    thermostat.up();
     thermostat.reset();
     expect(thermostat.showTemp()).toEqual(20)
   });
@@ -65,7 +41,7 @@ describe('Thermostat', function() {
   });
 
   it("shows its energy usage as high", function() {
-    for (var i = 0; i < 6; i++) {
+    for (var i = 0; i < 5; i++) {
       thermostat.up();
     }
     expect(thermostat.energyUsage()).toEqual('HIGH-USAGE')
@@ -80,5 +56,27 @@ describe('Thermostat', function() {
       thermostat.down();
     }
     expect(thermostat.energyUsage()).toEqual('LOW-USAGE')
+  });
+
+  it("throws an error if user tries to go above maximum degree when power is on", function() {
+    for (var i = 0; i < 5; i++) {
+      thermostat.up();
+    }
+    expect(function(){ thermostat.up();}).toThrowError('The temperature can not be above 25.');
+  });
+
+  it("throws an error if user tries to go above maximum degree when power is off", function() {
+    thermostat.powerSavingOff();
+    for (var i = 0; i < 12; i++) {
+      thermostat.up();
+    }
+    expect(function(){ thermostat.up();}).toThrowError('The temperature can not be above 32.');
+  });
+
+  it("throws an error if user tries to go below 10 degrees minimum", function() {
+    for (var i = 0; i < 10; i++) {
+      thermostat.down();
+    }
+    expect(function(){ thermostat.down();}).toThrowError('The temperature can not go below 10.');
   });
 });
