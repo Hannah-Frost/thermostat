@@ -29,4 +29,19 @@ describe('Thermostat', function() {
     thermostat.reset();
     expect(thermostat.temp()).toEqual(20)
   });
+
+  it("power saving mode has a default setting of true", function() {
+    expect(thermostat.powerSavingStatus()).toEqual(true);
+  });
+
+  it("can be turned off", function() {
+    thermostat.powerSavingOff();
+    expect(thermostat.powerSavingStatus()).toEqual(false);
+  });
+
+  it("can be turned on", function() {
+    thermostat.powerSavingOff();
+    thermostat.powerSavingOn();
+    expect(thermostat.powerSavingStatus()).toEqual(true);
+  });
 });
