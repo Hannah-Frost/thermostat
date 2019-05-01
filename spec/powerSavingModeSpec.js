@@ -6,6 +6,11 @@ describe('PowerSavingMode', function() {
   });
 
   it("has a default setting of on/true", function() {
-    expect(powerSavingMode.status).toBeTruthy();
+    expect(powerSavingMode.status()).toEqual(true);
+  });
+
+  it("can be turned off", function() {
+    powerSavingMode.turnOff();
+    expect(powerSavingMode.status()).toEqual(false);
   });
 });
