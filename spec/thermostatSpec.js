@@ -19,7 +19,17 @@ describe('Thermostat', function() {
     expect(thermostat.temp()).toEqual(17)
   });
 
-  it("can not go below the 10 degrees minimum", function () {
+  it("can not go above the 25 degrees maximum when power saving is on", function() {
+    thermostat.up(6);
+    expect(thermostat.temp()).toEqual(20)
+  });
+
+  it("can not go above the 32 degrees maximum when power saving is off", function() {
+    thermostat.up(13);
+    expect(thermostat.temp()).toEqual(20)
+  });
+
+  it("can not go below the 10 degrees minimum", function() {
     thermostat.down(11);
     expect(thermostat.temp()).toEqual(20)
   });
@@ -34,12 +44,12 @@ describe('Thermostat', function() {
     expect(thermostat.powerSavingStatus()).toEqual(true);
   });
 
-  it("can be turned off", function() {
+  it("power saving mode can be turned off", function() {
     thermostat.powerSavingOff();
     expect(thermostat.powerSavingStatus()).toEqual(false);
   });
 
-  it("can be turned on", function() {
+  it("power saving mode can be turned on", function() {
     thermostat.powerSavingOff();
     thermostat.powerSavingOn();
     expect(thermostat.powerSavingStatus()).toEqual(true);

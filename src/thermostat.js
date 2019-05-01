@@ -12,8 +12,14 @@ Thermostat.prototype.powerSavingStatus = function() {
 }
 
 Thermostat.prototype.up = function(num) {
+  var maximum
+  this.powerSaving === true ? maximum = 25 : maximum = 32
+  if (this.currentTemp + num > maximum) {
+    return "The temperature can not be above " + maximum + "."
+  } else {
   this.currentTemp += num;
   return "The temperature is now " + this.currentTemp + " degrees."
+  }
 };
 
 Thermostat.prototype.down = function(num) {
