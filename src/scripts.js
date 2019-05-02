@@ -17,4 +17,14 @@ $(document).ready(function() {
     thermostat.reset();
     $('#showTemp').text(thermostat.currentTemp);
   });
+
+  $('#powerSavingOn').click(function() {
+    thermostat.powerSavingOn();
+    $('#PMS').text(thermostat.PMS);
+  });
+
+  $('#powerSavingOff').click(function() {
+    thermostat.powerSavingOff();
+    $('#PMS').text(thermostat.PMS);
+  });
 });
