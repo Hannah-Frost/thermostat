@@ -2,6 +2,7 @@ function Thermostat() {
   this.defaultTemp = 20;
   this.currentTemp = this.defaultTemp;
   this.powerSaving = true;
+  this.PMS = "ON";
 };
 
 Thermostat.prototype.showTemp = function() {
@@ -38,10 +39,12 @@ Thermostat.prototype.reset = function() {
 
 Thermostat.prototype.powerSavingOn = function() {
   this.powerSaving = true;
+  this.PMS = "ON";
 };
 
 Thermostat.prototype.powerSavingOff = function() {
   this.powerSaving = false;
+  this.PMS = "OFF";
 };
 
 Thermostat.prototype.energyUsage = function() {
