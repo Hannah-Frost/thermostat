@@ -6,6 +6,7 @@ $(document).ready(function() {
   $('#up').click(function() {
     thermostat.up();
     $('#showTemp').text(thermostat.currentTemp);
+    $('#energyUsage').text(thermostat.energyUsage);
   });
 
   $('#down').click(function() {
@@ -28,7 +29,8 @@ $(document).ready(function() {
     $('#PMS').text(thermostat.PMS);
   });
 
-  $.get('http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=a3d9eb01d4de82b9b8d0849ef604dbed', function(data) {
+  $.get('http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric', function(data) {
     $('#weatherTemp').text(data.main.temp);
+    $('#location').text(data.name);
   })
 });
