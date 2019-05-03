@@ -1,0 +1,122 @@
+:root {
+}
+
+h1 {
+  color: white;
+  font-size: 32px;
+  font-family: tahoma;
+}
+
+h2 {
+  color: white;
+  font-size: 16px;
+  font-family: tahoma;
+}
+
+h3 {
+  color: white;
+  font-size: 16px;
+  font-family: tahoma;
+}
+
+body {
+  background-image: linear-gradient(to right, #ff0844 0%, #ffb199 100%);
+}
+
+.ps-button {
+  color: gray;
+  background-color: white;
+  font-family: verdana;
+  width: 150px;
+  height: 30px;
+}
+
+.dropdown {
+  color: gray;
+  background-color: white;
+  font-family: verdana;
+}
+
+.title-text {
+  position: relative;
+  border-radius: 25px;
+  top: 10px;
+  background-color: black;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.usage-text {
+  position: relative;
+  border-radius: 25px;
+  top: -10px;
+  background-color: black;
+  width: 350px;
+  margin: 0 auto;
+}
+
+.temp-text {
+  position: relative;
+  top: 0px;
+  left: 60px;
+  margin: 0 auto;
+  color: white;
+  font-size: 120px;
+  font-family: tahoma;
+}
+
+.up-button, .down-button {
+  position: relative;
+  border-radius: 25px;
+  right: 40px;
+  margin: 0 auto;
+  color: gray;
+  font-size: 20px;
+  font-family: verdana;
+  width: 40px;
+  height: 40px;
+}
+
+.down-button {
+  top: -51px;
+}
+
+.up-button {
+  top: -56px;
+}
+
+.reset-button {
+  position: relative;
+  color: gray;
+  font-size: 20px;
+  font-family: verdana;
+  border-radius: 25px;
+  margin: 0 auto;
+}
+
+.power-saving-text {
+  position: relative;
+  border-radius: 25px;
+  top: 100px;
+  background-color: black;
+  width: 350px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.ps-left-button {
+  position: relative;
+  border-radius: 25px;
+  top: 70px;
+  left: 00px;
+  width: 300px;
+  margin: 0 auto;
+}
+.ps-right-button {
+  position: relative;
+  border-radius: 25%;
+  top: 40px;
+  left: 150px;
+  width: 300px;
+  margin: 0 auto;
+}

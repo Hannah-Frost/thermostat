@@ -2,21 +2,30 @@
 <html>
   <head>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="./src/scripts.js"></script>
-    <link href="./src/style.css" rel="stylesheet" type="text/css" />
+    <script src="/scripts.js"></script>
+    <link href="/style.css" rel="stylesheet" type="text/css" />
     <title>Thermostat</title>
-    <center><h1>THERMOSTAT</h1></center>
+    <div class="title-text">
+      <center><h1>THERMOSTAT</h1></center>
+    </div>
   </head>
   <body>
     <section>
-      <center><h2><span id="energyUsage"></span></h2>
-      <h1><span id="showTemp"></span>º</h1>
-      <button id="up" class="button">+</button>
-      <button id="down" class="button">-</button>
-      <button id="reset" class="button">RESET</button>
-      <h2> Power Saving Mode: <span id="PMS">ON</span></h2>
-      <button id="powerSavingOn" class="button">ON</button>
-      <button id="powerSavingOff" class="button">OFF</button></center>
+      <div class="usage-text">
+        <center><h2><span id="energyUsage"></span></h2></center>
+      </div>
+      <div class="temp-text">
+        <center><span id="showTemp"></span>º</center>
+      </div>
+      <div class="up-button">
+        <button id="up" class="up-button">+</button>
+      </div>
+      <div class="down-button">
+        <button id="down" class="down-button">-</button>
+      </div>
+      <div class="reset-button">
+        <center><button id="reset" class="reset-button">RESET</button></center>
+      </div>
       <center><h3>Current temperature outside: <span id="weatherTemp"></span>º</h3>
       <h3>Location:</h3></center>
       <center><select id="location" class="dropdown">
@@ -33,7 +42,16 @@
         <option value="Sydney">Sydney</option>
         <option value="Tokyo">Tokyo</option>
       </select></center>
+      <div class="power-saving-text">
+        <center><h2> Power Saving Mode: <span id="PMS">ON</span></h2></center>
+      </div>
+      <div class="ps-left-button">
+        <button id="powerSavingOn" class="ps-button">ON</button>
+      </div>
+      <div class="ps-right-button">
+        <button id="powerSavingOff" class="ps-button">OFF</button>
+      </div>
     </section>
-    <script src="./src/thermostat.js"></script>
+    <script src="/thermostat.js"></script>
   </body>
 </html>

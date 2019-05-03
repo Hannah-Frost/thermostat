@@ -17,7 +17,7 @@ Thermostat.prototype.powerSavingStatus = function() {
 Thermostat.prototype.up = function() {
   var maximum
   this.powerSaving === true ? maximum = 25 : maximum = 32
-  if (this.currentTemp + 1 > maximum) {
+  if (this.currentTemp === maximum) {
     throw new Error("The temperature can not be above " + maximum + ".")
   } else {
   this.currentTemp += 1;
