@@ -3,6 +3,7 @@ function Thermostat() {
   this.currentTemp = this.defaultTemp;
   this.powerSaving = true;
   this.PMS = "ON";
+  this.energy = "MEDIUM-USAGE"
 };
 
 Thermostat.prototype.showTemp = function() {
@@ -20,6 +21,7 @@ Thermostat.prototype.up = function() {
     throw new Error("The temperature can not be above " + maximum + ".")
   } else {
   this.currentTemp += 1;
+  this.energyUsage();
   return "The temperature is now " + this.currentTemp + " degrees."
   }
 };
@@ -29,12 +31,14 @@ Thermostat.prototype.down = function() {
     throw new Error("The temperature can not go below 10.")
   } else {
   this.currentTemp -= 1;
+  this.energyUsage();
   return "The temperature is now " + this.currentTemp + " degrees."
   }
 };
 
 Thermostat.prototype.reset = function() {
   this.currentTemp = this.defaultTemp
+  this.energyUsage();
 };
 
 Thermostat.prototype.powerSavingOn = function() {
@@ -49,10 +53,10 @@ Thermostat.prototype.powerSavingOff = function() {
 
 Thermostat.prototype.energyUsage = function() {
   if (this.currentTemp < 18) {
-    return "LOW-USAGE"
+    this.energy = "LOW-USAGE"
   } else if (this.currentTemp < 25) {
-    return "MEDIUM-USAGE"
+    this.energy = "MEDIUM-USAGE"
   } else {
-    return "HIGH-USAGE"
+    this.energy = "HIGH-USAGE"
   }
 };

@@ -44,18 +44,18 @@ describe('Thermostat', function() {
     for (var i = 0; i < 5; i++) {
       thermostat.up();
     }
-    expect(thermostat.energyUsage()).toEqual('HIGH-USAGE')
+    expect(thermostat.energy()).toEqual('HIGH-USAGE')
   });
 
   it("shows its energy usage as medium", function() {
-    expect(thermostat.energyUsage()).toEqual('MEDIUM-USAGE')
+    expect(thermostat.energy()).toEqual('MEDIUM-USAGE')
   });
 
   it("shows its energy usage as low", function() {
     for (var i = 0; i < 6; i++) {
       thermostat.down();
     }
-    expect(thermostat.energyUsage()).toEqual('LOW-USAGE')
+    expect(thermostat.energy()).toEqual('LOW-USAGE')
   });
 
   it("throws an error if user tries to go above maximum degree when power is on", function() {

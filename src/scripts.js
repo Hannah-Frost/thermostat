@@ -2,21 +2,24 @@ $(document).ready(function() {
   var thermostat = new Thermostat();
   $('#showTemp').text(thermostat.currentTemp);
   $('#PMS').text(thermostat.PMS);
+  $('#energyUsage').text(thermostat.energy)
 
   $('#up').click(function() {
     thermostat.up();
     $('#showTemp').text(thermostat.currentTemp);
-    $('#energyUsage').text(thermostat.energyUsage);
+    $('#energyUsage').text(thermostat.energy);
   });
 
   $('#down').click(function() {
     thermostat.down();
     $('#showTemp').text(thermostat.currentTemp);
+    $('#energyUsage').text(thermostat.energy)
   });
 
   $('#reset').click(function() {
     thermostat.reset();
     $('#showTemp').text(thermostat.currentTemp);
+    $('#energyUsage').text(thermostat.energy)
   });
 
   $('#powerSavingOn').click(function() {
